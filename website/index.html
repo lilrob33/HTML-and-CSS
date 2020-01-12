@@ -2,214 +2,221 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Vault Tec</title>
+    <title>My Girls are my Everything</title>
     <meta name="Pedro Suarez">
-    <link rel="stylesheet" type="text/css" href="./website_css/index_css.css">
-    <link rel="stylesheet" type="text/css" href="./website_css/animations.css">
-   
+    <link rel="stylesheet" type="text/css" href="./css/one_page_website.css">
+    <script src="./js/one_page.js"></script>
 </head>
 
 <body>
 
-    <style>
-        body {
-          background-image: url('./images/vault_tec.jpeg');
-        }
-        </style> 
-    
     <!-- Nav -->
     <div class="wrap">
-        <div class="menu-container">
+        <div class="menu">
             <ul class="menu">
-                <a href="#home" id="link"><li>Home</li></a>
-                <a href="#gallery"><li>Gallery</li></a>
-                <a href="#rsvp"><li>RSVP</li></a>
+                <a href="#home">
+                    <li>Home</li>
+                </a>
+                <a href="#pic">
+                    <li>Picture Gallery</li>
+                </a>
+                <a href="#video">
+                    <li>Videos</li>
+                </a>
+                <a href="#contact">
+                    <li>Contact</li>
+                </a>
             </ul>
         </div>
     </div>
     <!-- End Nav -->
 
-    <!-- Home -->
+    <main>
 
-    <div id="home">
-        <div class="container">
-            <div class="text-center">
-                <span class="head-main">Prepare for the future!</span>
+        <!-- home -->
+        <div id="home">
+            <h1><span class="blinking">My Girls mean the world to me!</span></h1>
+
+        </div>
+
+        <div>
+            <p>My girls, are extreamly talented in many ways. I hope to be able to teach them to really chase
+                their dreams. I have such high hopes for them, as I watch them make videos from
+                tours around the house to TikTok videos. They have no idea how much they really have
+                to offer the world in entertaining and just plain smarts. I hope to be able to
+                show them a path in life that they can reach thier full potential without a
+                lot of bumps.
+            </p>
+        </div>
+        <!-- End home -->
+
+        <!-- Lightbox imgs -->
+        <div class="row" id="pic">
+            <div class="column">
+                <img src="./images/girls_1.JPG" alt="My girls" height="200px" width="100px"
+                    onclick="openModal();currentSlide(1)" class="hover-shadow">
+            </div>
+            <div class="column">
+                <img src="./images/img1.jpg" height="200px" width="100px" onclick="openModal();currentSlide(2)"
+                    class="hover-shadow">
+            </div>
+            <div class="column">
+                <img src="./images/img2.jpg" height="200px" width="100px" onclick="openModal();currentSlide(3)"
+                    class="hover-shadow">
+            </div>
+            <div class="column">
+                <img src="./images/img6.jpg" height="200px" width="100px" onclick="openModal();currentSlide(4)"
+                    class="hover-shadow">
+            </div>
+            <div class="column">
+                <img src="./images/img3.jpg" height="200px" width="100px" onclick="openModal();currentSlide(3)"
+                    class="hover-shadow">
+            </div>
+            <div class="column">
+                <img src="./images/img4.jpg" height="200px" width="100px" onclick="openModal();currentSlide(4)"
+                    class="hover-shadow">
             </div>
         </div>
+        <!-- End Lightbox imgs-->
+
+        <!-- Lightbox -->
+        <div id="myModal" class="modal">
+            <span class="close cursor" onclick="closeModal()">&times;</span>
+            <div class="modal-content">
+
+                <div class="mySlides">
+                    <div class="numbertext">1 / 6</div>
+                    <img src="./images/girls_1.JPG" height="560px" width="425px">
+                </div>
+
+                <div class="mySlides">
+                    <div class="numbertext">2 / 6</div>
+                    <img src="./images/img1.jpg" height="560px" width="425px">
+                </div>
+
+                <div class="mySlides">
+                    <div class="numbertext">3 / 6</div>
+                    <img src="./images/img2.jpg" height="560px" width="425px">
+                </div>
+
+                <div class="mySlides">
+                    <div class="numbertext">4 / 6</div>
+                    <img src="./images/img6.jpg" height="560px" width="425px">
+                </div>
+
+                <div class="mySlides">
+                    <div class="numbertext">5 / 6</div>
+                    <img src="./images/img3.jpg" height="560px" width="425px">
+                </div>
+
+                <div class="mySlides">
+                    <div class="numbertext">6 / 6</div>
+                    <img src="./images/img4.jpg" height="560px" width="425px">
+                </div>
+                <!-- End Lightbox -->
+
+                <!-- Next/prev controls -->
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                <!-- End Next/Prev controls-->
+
+                <!-- Caption text -->
+                <div class="caption-container">
+                    <p id="caption"></p>
+                </div>
+                <!-- End Caption text-->
+
+                <!-- Thumbnail image controls -->
+                <div class="column">
+                    <img class="thumbImg" src="./images/girls_1.JPG" height="200px" width="100px"
+                        onclick="currentSlide(1)" alt="This is me and the girls at Multnomah Falls.">
+                </div>
+
+                <div class="column">
+                    <img class="thumbImg" src="./images/img1.jpg" height="200px" width="100px" onclick="currentSlide(2)"
+                        alt="My kids at a wedding">
+                </div>
+
+                <div class="column">
+                    <img class="thumbImg" src="./images/img2.jpg" height="200px" width="100px" onclick="currentSlide(3)"
+                        alt="My two youngest girls hanging out with me">
+                </div>
+
+                <div class="column">
+                    <img class="thumbImg" src="./images/img6.jpg" height="200px" width="100px" onclick="currentSlide(4)"
+                        alt="Laureen and the girls">
+                </div>
+
+                <div class="column">
+                    <img class="thumbImg" src="./images/img3.jpg" height="200px" width="100px" onclick="currentSlide(3)"
+                        alt="Me and Peyton when she was younger">
+                </div>
+
+                <div class="column">
+                    <img class="thumbImg" src="./images/img4.jpg" height="200px" width="100px" onclick="currentSlide(4)"
+                        alt="Peyton and baby Ari">
+                </div>
+                <!-- End Thumbnail controls -->
+            </div>
+        </div>
+    </main>
+</body>
+
+<footer>
+    <div>
+        <p>
+            These two girls alone are more than amazing, and put them together and they are
+            unstoppable. These two really do complement eachother and do not realize it yet.
+        </p>
     </div>
-    <!-- End Home -->
 
-    <!-- Gallery -->
+    <!-- tiktok videos -->
+    <div id="video">
+        <blockquote class="tiktok-embed" cite="https://www.tiktok.com/@queenboss66/video/6780821786373180677"
+            data-video-id="6780821786373180677" style="max-width: 605px;min-width: 325px;">
+            <section> <a target="_blank" title="@queenboss66"
+                    href="https://www.tiktok.com/@queenboss66">@queenboss66</a>
+                <p></p> <a target="_blank" title="♬ Suicidal - YNW Melly"
+                    href="https://www.tiktok.com/music/Suicidal-6768934736241920773">♬ Suicidal - YNW Melly</a>
+            </section>
+        </blockquote>
 
-    <section id="gallery">
-        <div class="container">
-            <h1>Gallery</h1>
-            <div class="flex-container">
+        <script async src="https://www.tiktok.com/embed.js"></script>
+        <blockquote class="tiktok-embed" cite="https://www.tiktok.com/@queenboss66/video/6780446456777035014"
+            data-video-id="6780446456777035014" style="max-width: 605px;min-width: 325px;">
+            <section> <a target="_blank" title="@queenboss66"
+                    href="https://www.tiktok.com/@queenboss66">@queenboss66</a>
+                <p></p> <a target="_blank" title="♬ VIBEZ - DaBaby"
+                    href="https://www.tiktok.com/music/VIBEZ-6770379728990882565">♬ VIBEZ - DaBaby</a>
+            </section>
+        </blockquote>
+        <script async src="https://www.tiktok.com/embed.js"></script>
+    </div>
+    <!-- End tiktok videos -->
 
-                <!-- Photo Container 1 -->
-
-                <div class="photo-container">
-                    <div class="photo">
-                        <img src="./images/thumb/thumb_1.jpeg" alt="">
-                        <div class="photo-overlay">
-                            <h3 class="whitehead">Click to Enlarge</h3>
-                            <p>Prepare for the Future</p>
-                        </div>
-                    </div>
-                </div>
-                <!-- End Photo Container 1 -->
-
-                <!-- Photo Container 2-->
-
-                <div class="photo-container">
-                    <div class="photo">
-                        <img src="./images/thumb/thumb_2.jpeg" alt="">
-                        <div class="photo-overlay">
-                            <h3 class="whitehead">Click to Enlarge</h3>
-                            <p>Vault dwellers orientation kit</p>
-                        </div>
-                    </div>
-                </div>
-                <!-- End Photo Container 2 -->
-
-                <!-- Photo Container 3 -->
-
-                <div class="photo-container">
-                    <div class="photo">
-                        <img src="./images/thumb/thumb_3.jpeg" alt="">
-                        <div class="photo-overlay">
-                            <h3 class="whitehead">Click to Enlarge</h3>
-                            <p>Pip-Boy 3000 Mark IV</p>
-                        </div>
-                    </div>
-                </div>
-                <!-- End Photo Container 3 -->
-
-                <!-- Photo Container 4 -->
-
-                <div class="photo-container">
-                    <div class="photo">
-                        <img src="./images/thumb/thumb_4.jpeg" alt="">
-                        <div class="photo-overlay">
-                            <h3 class="whitehead">Click to Enlarge</h3>
-                            <p>Vault Flyer</p>
-                        </div>
-                    </div>
-                </div>
-                <!-- End Photo Container 4 -->
-
-                <!-- Photo Container 5 -->
-
-                <div class="photo-container">
-                    <div class="photo">
-                        <img src="./images/thumb/thumb_5.jpeg" alt="">
-                        <div class="photo-overlay">
-                            <h3 class="whitehead">Click to Enlarge</h3>
-                            <p>Power Armor by Vault-Tec</p>
-                        </div>
-                    </div>
-                </div>
-                <!-- End Photo Container 5 -->
-
-                <!-- Photo Container 6 -->
-
-                <div class="photo-container">
-                    <div class="photo">
-                        <img src="./images/thumb/vault_tec_3.jpeg" alt="">
-                        <div class="photo-overlay">
-                            <h3 class="whitehead">Click to Enlarge</h3>
-                            <p>Vault-Tec Ad</p>
-                        </div>
-                    </div>
-                </div>
-                <!-- End Photo Container 6 -->
-
-                <!-- Photo Container 7 -->
-
-                <div class="photo-container">
-                    <div class="photo">
-                        <img src="./images/thumb/thumb_9.jpg" alt="">
-                        <div class="photo-overlay">
-                            <h3 class="whitehead">Click to Enlarge</h3>
-                            <p>Vault layout example</p>
-                        </div>
-                    </div>
-                </div>
-                <!-- End Photo Container 7 -->
-
-                <!-- Photo Container 8 -->
-
-                <div class="photo-container">
-                    <div class="photo">
-                        <img src="./images/thumb/vault_tec_7.jpeg" alt="">
-                        <div class="photo-overlay">
-                            <h3 class="whitehead">Click to Enlarge</h3>
-                            <p>A Better Future</p>
-                        </div>
-                    </div>
-                </div>
-                <!-- End Photo Container 8 -->
-
-                <!-- Photo Container 9 -->
-
-                <div class="photo-container">
-                    <div class="photo">
-                        <img src="./images/thumb/thumb_8.jpg" alt="">
-                        <div class="photo-overlay">
-                            <h3 class="whitehead">Click to Enlarge</h3>
-                            <p>Vault Boy Bobbleheads-Order yours today!</p>
-                        </div>
-                    </div>
-                </div>
-                <!-- End Photo Container 9 -->
-
-            </div>
+    <!-- Contact -->
+    <section>
+        <div id="contact">
+            <p>For more information please submit your basic information</p>
+            <form>
+                <input type="text" name="firstname" placeholder="First Name"><br>
+                <input type="text" name="lastname" placeholder="Last Name"><br>
+                <input type="text" name="email" placeholder="Email Address"><br>
+            </form>
+            <button class="button" type="submit" value="Submit">Submit</button>
         </div>
     </section>
+    <!-- End Contact -->
 
-    <!-- End Gallery -->
+    <!-- tiktok links -->
+    <p>You can follow them Here</p>
+    <a href="">@queenboss66</a>
+    <a href="">@ariana_peyton0426</a>
 
-    <!-- RSVP -->
+    <p>Posted by: Pedro Suarez</p>
+    <p>Contact information: <a href="#">
+            PedroSuarez@example.com</a>.</p>
 
-    <section id="rsvp">
-        <div class="container">
-            <div class="heading-padding">
-                <h1 class="heading-padding">Reservations</h1>
-                <div class="reservations">
-                    <h2>Your Future matters.<span> Protect it with Vault-Tec.</span></h2>
-                    <p class="rsvp-text">
-                        Please provide us with your basic information and a Vault Tec 
-                        service agent will contact you shortly.
-                    </p>
-                    <div class="form-rsvp">
-                        <form action="" method="post">
-                            <input class="rsvp" type="text" Value="" placeholder="First Name">
-                            <input class="rsvp" type="text" Value="" placeholder="Last Name">
-                            <input class="rsvp" type="text" Value="" placeholder="Email Address">
-                            <input class="rsvp" type="text" Value="" placeholder="Phone Number">
-                            <div class="form-spacer">
-                                <label class="terms">Terms and Conditions</label>
-                            </div>
-                            <div class="submit">
-                                <input type="submit" value="submit">
-                            </div>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- End RSVP -->
-
-    <!-- Footer -->
-
-    <iframe width="400" height="250" src="https://www.youtube.com/embed/cco_DvSzrts"
-     frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-      allowfullscreen></iframe>
-
-<div id="footer">
-    www.vaulttec.tec Toll Free 1-888-4-VAULT-TEC (1-888-4-82858-832) &nbsp;|&nbsp; &copy; 2019
-</div>
+</footer>
 
 </html>
